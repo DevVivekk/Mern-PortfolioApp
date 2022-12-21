@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import { NavLink, useNavigate } from 'react-router-dom';
 import Vivek from '../media/Vivekk.jpg';
+import SimpleBackdrop from './backdrop';
 
 const Signup = () => {
     const navigate = useNavigate();
@@ -35,7 +36,7 @@ const Signup = () => {
   return (
     <div className='signup'>
     <img src={Vivek} alt='img' style={{"width":"25rem","height":"25rem","borderRadius":"50%","border":"0.3rem solid green"}}/>
-    <h1 style={{"marginTop":"4rem","fontSize":"4rem","fontFamily":"sans-serif","color":"wheat"}}>Welcome to my Portfolio</h1>
+    <h1 style={{"marginTop":"4rem","fontSize":"4rem","fontFamily":"sans-serif","color":"blue"}}>Welcome to my Portfolio</h1>
     <p style={{"marginTop":"5rem","fontSize":"2rem","fontStyle":"oblique"}}>Just <span><NavLink style={{"color":"blue","textDecoration":"none"}} onClick={()=>setHide(!hide)}>register</NavLink></span> to continue...</p>
     {
         hide?<div style={{"marginTop":"3rem","marginBottom":"3rem"}}>
@@ -56,7 +57,7 @@ const Signup = () => {
         :null
     }
     <p style={{"marginTop":"1.5rem","fontSize":"2rem","fontStyle":"italic","fontWeight":"bold"}}>Or</p>
-    <p onClick={()=>navigate('/login')} style={{"marginTop":"1.5rem","fontSize":"2rem","fontStyle":"oblique"}}>Skip to <span><NavLink style={{"textDecoration":"none","color":"blue"}}>Sign in</NavLink></span></p>
+    <p onClick={()=>navigate('/login')} style={{"marginTop":"1.5rem","fontSize":"2rem","fontStyle":"oblique","marginBottom":"5rem"}}>Skip to <span><NavLink style={{"textDecoration":"none","color":"blue"}}>Sign in</NavLink></span></p>
     
     </div>
   )

@@ -187,8 +187,9 @@ html{
 .signup{
     width: 100vw;
     min-width: 50rem;
-    height: 200vh;
-    background-image: linear-gradient(160deg, blue,purple,hotpink,white);
+    height: auto;
+    min-height: 100vh;
+    background-image: linear-gradient(100deg, white,hotpink);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -220,7 +221,7 @@ button:hover{
     cursor: pointer;
 }
 label{
-    color: whitesmoke;
+    color: black;
     font-size: 1.6rem;
     font-family:monospace;
     font-weight: 600;

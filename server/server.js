@@ -36,7 +36,7 @@ app.post('/signup', async(req,res)=>{
             if(!userexists){
                 const savedata  = new mongooseModel({fullname,phone,email,password,confirmpassword});
                 const printData = await savedata.save();
-                console.log(printData);
+           
                 res.status(201).send('success signup')
             }else{
                 res.status(401).json({error:"userexists"})
@@ -60,7 +60,7 @@ app.post('/login', async(req,res)=>{
                 const isMatch = await bycrypt.compare(password,userexists.password);
                 if(isMatch){
                     const token = await userexists.generateAuthToken();
-                    console.log(token);
+              
                     res.cookie('jwtokenn',token,{
                         expires:new Date(Date.now() + 25892000000),
                         httpOnly:true
